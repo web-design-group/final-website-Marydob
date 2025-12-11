@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+        body {
+        font-family: 'Guidy', Arial, sans-serif;
+        line-height: 1.6;
+        color: #242424;
+        background: #242424;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 clamp(16px, 4vw, 32px);
+        }
+
+        
+    .header {
+    background: #181818;
+    padding: clamp(12px, 2.5vw, 20px) 0; 
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(10px, 2vw, 20px); 
+}
+
+.logo {
+    font-family: 'Nuosu SIL', serif;
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: normal;
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+.nav a {
+    font-family: 'Guidy', Arial, sans-serif;
+    font-size: clamp(14px, 2vw, 18px);
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    padding: 8px 15px;
+}
+
+.nav a:hover {
+    color: #ff4444;
+}
+
+.user-icon {
+    font-size: clamp(18px, 4vw, 24px);
+    color: white;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.user-icon:hover {
+    color: #ff4444;
+}
+
+        
+        .main-title {
+            text-align: center;
+            padding: clamp(40px, 8vw, 60px) 0 clamp(20px, 4vw, 30px);
+        }
+
+        .main-title h1 {
+            font-size: clamp(28px, 4vw, 36px);
+            color: #FFFFFF;
+            line-height: 1.3;
+            font-weight: normal;
+        }
+
+        
+        .filter-section {
+            display: grid;
+            justify-content: center;
+            padding: 0 0 clamp(30px, 6vw, 40px);
+        }
+
+        .filter {
+            background: #FFFFFF;
+            border-radius: 25px;
+            padding: clamp(12px, 2vw, 15px) clamp(20px, 3vw, 30px);
+            display: flex;
+            gap: clamp(20px, 4vw, 40px);
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: clamp(8px, 1.5vw, 12px);
+            cursor: pointer;
+            padding: clamp(8px, 1.5vw, 10px) clamp(15px, 2.5vw, 20px);
+            border-radius: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .filter-option:hover {
+            background: #f0f0f0;
+        }
+
+        .filter-option.active {
+            background: #f0f0f0;
+        }
+
+        .filter-circle {
+            width: clamp(16px, 3vw, 20px);
+            height: clamp(16px, 3vw, 20px);
+            border-radius: 50%;
+            border: 2px solid #666;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .filter-option.active .filter-circle {
+            border-color: #D81821;
+            background: #D81821;
+        }
+
+        .filter-label {
+            color: #242424;
+            font-size: clamp(14px, 2vw, 16px);
+            white-space: nowrap;
+        }
+
+        
+        .courses-section {
+            padding: 0 0 clamp(60px, 10vw, 80px);
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+            gap: clamp(20px, 3vw, 25px);
+            justify-items: center;
+        }
+
+        .course-card {
+            background: #FFFFFF;
+            border-radius: 15px;
+            padding: clamp(20px, 3vw, 30px);
+            display: grid;
+            grid-template-rows: auto 150px auto auto;
+            gap: clamp(15px, 2vw, 20px);
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+            width: min(282px, 100%);
+            height: auto;
+            min-height: 483px;
+        }
+
+        .course-title {
+            font-size: clamp(18px, 2.5vw, 20px);
+            color: #242424;
+            display: grid;
+            align-items: center;
+            min-height: 60px;
+            font-weight: normal;
+        }
+
+        .course-image {
+            width: 150px;
+            height: 150px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 10px;
+        }
+
+        .course-price {
+            font-size: clamp(22px, 3.5vw, 26px);
+            color: #D81821;
+            display: grid;
+            align-items: center;
+            font-weight: normal;
+        }
+
+        .enroll-button {
+            padding: clamp(12px, 2vw, 15px) clamp(20px, 3vw, 25px);
+            background: #D81821;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: clamp(14px, 2vw, 16px);
+            cursor: pointer;
+            transition: background 0.3s ease;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+            height: clamp(45px, 4vw, 50px);
+        }
+
+        .enroll-button:hover {
+            background: #e02a32;
+        }
+
+        
+.questions {
+    padding: 80px 0;
+    background: #242424;
+}
+
+.questions-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.questions-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.questions-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.questions-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.questions-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.questions h2 {
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    color: white; 
+}
+
+.questions p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #ccc; 
+}
+
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white; 
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 15px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff4444;
+    outline: none;
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+
+.submit-button {
+    padding: 15px 40px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 68, 68, 0.6);
+    background: #ff5555;
+}
+
+        
+.footer {
+    background: #181818;
+    color: white;
+    padding: clamp(20px, 3vw, 40px) 0;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: flex-start; 
+    margin-top: 5px; 
+}
+
+.footer-logo {
+    font-family: 'Nuosu SIL', serif;
+    font-size: clamp(24px, 3.5vw, 2rem);
+    color: white;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.footer-courses {
+    font-size: clamp(14px, 2vw, 1.1rem);
+    color: #ccc;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-end;
+   
+}
+
+.footer-nav a {
+    font-size: clamp(14px, 2vw, 1.1rem);
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    
+}
+
+.footer-nav a:hover {
+    color: #ff4444;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: clamp(35px, 4vw, 45px);
+    height: clamp(35px, 4vw, 45px);
+    border-radius: 50%;
+    background: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(16px, 2.5vw, 1.2rem);
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: #ff4444;
+}
+    
