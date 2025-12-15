@@ -1,0 +1,241 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif; 
+            line-height: 1.6;
+            color: white;
+            background: #242424;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 clamp(16px, 4vw, 32px);
+        }
+
+     
+        .header {
+            background: #181818;
+            padding: clamp(12px, 2.5vw, 20px) 0; 
+            width: 100%;
+            border-bottom: 1px solid #333;
+        }
+        .navbar-nav {
+            display: flex;
+            gap: clamp(10px, 2vw, 20px); 
+        }              
+      
+        .navbar-nav .nav-link {
+            font-size: clamp(14px, 2vw, 18px);
+            color: white;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+            padding: 8px 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff4444;
+        }
+
+     
+        .navbar-dark .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #ff4444;
+        }
+
+        
+        .navbar-toggler {
+            border: 1px solid white;
+            padding: 5px 10px;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .logo {
+            font-family: 'Nuosu SIL', serif;
+            font-size: clamp(24px, 5vw, 32px);
+            font-weight: normal;
+            color: white;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        .user-icon {
+            font-size: clamp(18px, 4vw, 24px);
+            color: white;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .user-icon:hover {
+            color: #ff4444;
+        }
+
+    
+        .lk-header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--header-bg-image);
+    background-size: cover;
+    background-position: center;
+    height: clamp(300px, 444px, 500px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+        .lk-title {
+            font-size: clamp(36px, 4vw, 48px);
+            color: #FFFFFF;
+        }
+
+        
+        .main-content {
+            padding: clamp(60px, 8vw, 100px) 0 clamp(30px, 4vw, 40px) 0;
+        }
+
+        
+        .dashboard-block {
+            margin-bottom: clamp(40px, 6vw, 80px);
+        }
+
+        .block-title {
+            font-size: clamp(28px, 3vw, 36px);
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+
+        .title-line {
+            height: 1px;
+            background-color: #FFFFFF;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .block-item {
+            font-size: clamp(20px, 2.5vw, 24px);
+            color: #FFFFFF;
+            padding: 8px 0;
+            cursor: pointer;
+        }
+
+       
+        .no-hover-effect {
+            cursor: default;
+            color: #FFFFFF;
+        }
+
+        .no-hover-effect:hover {
+            color: #FFFFFF;
+        }
+
+        
+        .btn-logout {
+            background-color: #D81821;
+            border-color: #D81821;
+            color: white;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-size: clamp(14px, 2vw, 16px);
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            max-width: 300px;
+            margin: 20px auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+.btn-settings {
+    all: unset;
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: clamp(20px, 2.5vw, 24px);
+    padding: 8px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+.btn-settings:hover {
+    color: #ff4444;
+}
+        .btn-logout:hover {
+            background-color: #e02a32;
+            border-color: #e02a32;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-logout:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-logout:focus {
+            box-shadow: 0 0 0 0.25rem rgba(216, 24, 33, 0.25);
+        }
+
+        
+        .footer {
+            background: #181818;
+            color: white;
+            padding: clamp(20px, 3vw, 40px) 0; 
+            border-top: 1px solid #333;
+        }
+
+        .social-icon {
+            width: clamp(35px, 4vw, 45px);
+            height: clamp(35px, 4vw, 45px);
+            border-radius: 50%;
+            background: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: clamp(16px, 2.5vw, 1.2rem);
+            transition: background 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: #ff4444;
+        }
+
+        .footer-logo {
+            font-family: 'Nuosu SIL', serif;
+            font-size: clamp(24px, 3.5vw, 2rem);
+            color: white;
+            font-weight: normal;
+            margin-bottom: 8px; 
+        }
+
+        .footer-courses {
+            font-size: clamp(14px, 2vw, 1.1rem);
+            color: #ccc;
+            line-height: 1.4;
+            margin-bottom: 15px; 
+        }
+
+        .footer-nav a {
+            font-size: clamp(14px, 2vw, 1.1rem);
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .footer-nav a:hover {
+            color: #ff4444;
+        }
